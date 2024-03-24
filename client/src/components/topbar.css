@@ -1,0 +1,178 @@
+.topbar {
+    background: #08acbb;
+    height: 100px;
+    width:100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+  }
+.logo {
+    display: flex;
+} 
+
+.user-profile {
+
+    height: 45px;
+    width: 45px;
+    margin-top: 25px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+.user-text {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.logo-img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    align-items: center;
+    padding: 5px;
+}  
+
+.logo-title {
+    color: white;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.weather-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.weather-title {
+    font-size: 15px;
+    color: bisque;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.elements {
+    display: flex;
+    font-size: 20px;
+    color: beige;
+    padding: 5px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}  
+
+.nav-container {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+
+    display: flex;
+    
+}
+
+li:hover{
+    color: black;
+    cursor:progress;
+}
+
+.nav-icon {
+    display: none;
+    color: black;
+  }
+  
+  .nav-icon .icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .nav-item {
+    line-height: 40px;
+    margin-right: 1rem;
+  }
+  
+  .nav-item:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.7s ease, background-color 0.5s ease;
+  }
+  
+  .nav-item:hover:after {
+    width: 100%;
+    background: #ffdd40;
+  }
+
+
+@media only screen and (max-width: 768px) {
+    
+    .elements {
+        display: inline;
+    }
+     
+    .topbar {
+        height: 75px;
+    }
+
+    .logo-title {
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .logo-img {
+        height: 45px;
+        width: 45px;
+    }
+
+    .weather-img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: 1pxsolid #fff;
+        position: absolute;
+        top: 80px;
+        left: -110%;
+        opacity: 1;
+        transition: all 0.5s ease;
+      }
+    
+      .nav-menu.active {
+        background: #08acbb;
+        left: 0px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+      }
+
+    .nav-icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-100%, -50%);
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        color: white;
+      }
+}

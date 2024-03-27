@@ -25,7 +25,7 @@ function Business() {
         <>
         <Topbar/>
         <div className="news-container"> {/* Apply container class */}
-            <h2>Breaking News</h2>
+            <h3>Business Headlines</h3>
             <ul className="news-grid"> {/* Apply grid class */}
                 {news.map(article => (
                     <li key={article.title} className="news-item"> {/* Apply item class */}

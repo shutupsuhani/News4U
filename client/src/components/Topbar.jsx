@@ -1,15 +1,37 @@
 import "./topbar.css";
 import { HamburgetMenuClose, HamburgetMenuOpen } from "./Icon";
-import { useState,useEffect } from "react";
-import axios from "axios";
-const Topbar = ({userEmail}) => {
+import { useState } from "react";
+import { useAuth } from './AuthContext';
+import { useNavigate } from "react-router-dom";
+const Topbar = () => {
   const [click, setClick] = useState(false);
-  const [searchClick, setSearchClick] = useState(false);
+  const navigate = useNavigate();
   const handleClick = () => setClick(!click);
+  const { user,logout } = useAuth();
   
-  
- 
+  const handleBusinessClick = () => {
+    navigate('/BusinessNews'); 
+  };
 
+  const handleEntertainmentClick = () => {
+    navigate('/EntertainmentNews'); 
+  };
+
+  const handleLifestyleClick = () => {
+    navigate('/LifestyleNews'); 
+  };
+
+  const handleHealthClick = () => {
+    navigate('/HealthNews'); 
+  };
+  
+  const handleSportsClick = () => {
+    navigate('/SportsNews'); 
+  };
+
+  const handleNewsClick = () => {
+    navigate('/latestNews'); 
+  };
   return (
     <>
       <div className="topbar">
@@ -20,12 +42,12 @@ const Topbar = ({userEmail}) => {
           </div>
           <div className="elements">
             <ul className={click ? "nav-menu active" : "nav-menu"}>
-              <li className="nav-item">NEWS</li>
-              <li className="nav-item">SPORTS</li>
-              <li className="nav-item">BUSINESS</li>
-              <li className="nav-item">ENTERTAINMENT</li>
-              <li className="nav-item">LIFESTYLE</li>
-              <li className="nav-item">HEALTH</li>
+              <li className="nav-item" onClick={handleNewsClick}>NEWS</li>
+              <li className="nav-item " onClick={handleSportsClick}>SPORTS</li>
+              <li className="nav-item" onClick={handleBusinessClick}>BUSINESS</li>
+              <li className="nav-item" onClick={handleEntertainmentClick}>ENTERTAINMENT</li>
+              <li className="nav-item" onClick={handleLifestyleClick}>LIFESTYLE</li>
+              <li className="nav-item" onClick={handleHealthClick}>HEALTH</li>
             </ul>
           </div>
 
@@ -48,13 +70,11 @@ const Topbar = ({userEmail}) => {
           </div>
 
           <div className="user-email">
-            {userEmail && <p>{userEmail}</p>}
+          <h2> {user ? user.email : 'Guest'}</h2>
+          {user && <button className="logout-btn" onClick={logout}>Logout</button>}
           </div>
 
-          <div className="user-profile">
-              <span className="user-text">S</span>
-          </div>
-
+          
         </div>
       </div>
     </>

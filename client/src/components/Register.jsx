@@ -4,12 +4,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import './register.css'
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from "../firebase.js";
-import Topbar from './Topbar.jsx';
+import { Link,useNavigate } from 'react-router-dom';
+
 
 const Register = () => {
    const [email,setEmail]=useState("");
    const [password, setPassword]=useState(""); 
-  
+   const navigate=useNavigate();
    const register=async ()=>{
         try{
           const user=await createUserWithEmailAndPassword(auth,email,password);
@@ -18,6 +19,7 @@ const Register = () => {
           setEmail("");
           setPassword("");
           toast.success("Registration successful!");
+          navigate('/')
         } catch(err){
               console.log(err.message)
               toast.error("Registration failed. Please try again.");
@@ -25,7 +27,7 @@ const Register = () => {
    }
   return (
     <>
-   <Topbar />
+   
     <div className='register-div'>
      
       <h2>Register</h2>
@@ -37,7 +39,7 @@ const Register = () => {
         <button onClick={register} className='reg-btn' >Register</button>
       </div>
 
-      <p>Already have an Account? Login</p>
+      <p>Already have an Account? <Link to="/">Login</Link></p>
       <ToastContainer/>
     </div>
 

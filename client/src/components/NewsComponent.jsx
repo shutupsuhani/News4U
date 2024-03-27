@@ -8,7 +8,7 @@ import Footer from './Footer';
 
 function NewsComponent() {
     const [news, setNews] = useState([]);
-
+    
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -23,9 +23,9 @@ function NewsComponent() {
 
     return (
         <>
-        <Topbar/>
+        <Topbar  />
         <div className="news-container"> {/* Apply container class */}
-            <h2>Breaking News</h2>
+            <h2>Latest Headlines</h2>
             <ul className="news-grid"> {/* Apply grid class */}
                 {news.map(article => (
                     <li key={article.title} className="news-item"> {/* Apply item class */}
@@ -44,6 +44,7 @@ function NewsComponent() {
                 ))}
             </ul>
         </div>
+
         <Footer/>
         </>
     );

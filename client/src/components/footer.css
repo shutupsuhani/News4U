@@ -1,7 +1,7 @@
 .footer {
     height: 200px;
     width: 100%;
-    background-color: rgb(48, 55, 62);
+    background-color: rgb(74, 84, 94);
     color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -16,4 +16,13 @@
    line-height: 40px;
     margin-right: 1rem;
 }
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 

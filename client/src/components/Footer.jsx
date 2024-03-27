@@ -17,6 +17,10 @@ const Footer = () => {
         </ul>
       </div>
 
+      <div className="copyright">
+        <h4>News4U ⓒ2024,All Rights Reserved </h4>
+      </div>
+
      
 
     </div>

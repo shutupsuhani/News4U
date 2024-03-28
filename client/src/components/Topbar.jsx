@@ -70,7 +70,7 @@ const Topbar = () => {
           </div>
 
           <div className="user-email">
-          <h2> {user ? user.email : 'Guest'}</h2>
+          <h2>Welcome,{user ? user.email : 'Guest'}</h2>
           {user && <button className="logout-btn" onClick={logout}>Logout</button>}
           </div>
 

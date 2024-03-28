@@ -1,56 +1,55 @@
 .news-container {
-    padding: 20px;
-
-    margin-top: 80px;
+  padding: 20px;
+  margin-top: 80px;
+  scroll-behavior: smooth;
 }
 
 .news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
-    grid-gap: 20px;
-    list-style: none;
-    padding: 0;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); 
+  grid-gap: 20px;
+  list-style: none;
+  padding: 0;
 }
 
-
-
-
-
 .news-item {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .news-item:hover {
-    background:rgb(229, 229, 235);
+  background: rgb(229, 229, 235);
 }
 
 .news-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .news-details {
-    padding: 20px;
+  padding: 20px;
 }
 
-.news-placeholder-image{
-    height: auto;
-    width: 100%;
+.news-placeholder-image {
+  height: auto;
+  width: 100%;
 }
 
 .news-title {
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 10px;
 }
 
 .news-description {
-    font-size: 18px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #666;
-    margin: 0;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #666;
+  margin: 0;
 }

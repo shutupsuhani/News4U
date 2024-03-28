@@ -16,7 +16,9 @@ It has a Pop Up feature uisng Toast Library in React.
 
 To run it on Your System Locally , follow the following Steps.
 > cd client
+
 > npm install
+
 > npm run dev
 
 

@@ -42,7 +42,7 @@ function NewsComponent() {
             <ul className="news-grid"> {/* Apply grid class */}
                 {news.map(article => (
                     <li key={article.title} className="news-item" onMouseEnter={() => displayToast(article)}> {/* Apply item class */}
-                        <div>
+                        <a  href={article.url} target="_blank" rel="noopener noreferrer">
                             {article.urlToImage ? ( // Conditionally render image
                                 <img src={article.urlToImage} alt={article.title} className="news-image" /> // Render news image
                             ) : (
@@ -50,8 +50,9 @@ function NewsComponent() {
                             )}
                             <div className="news-details"> {/* Apply details class */}
                                 <h3 className="news-title">{article.title}</h3> {/* Apply title class */}
+                                <p className="news-description">{article.description}</p>
                             </div>
-                        </div>
+                        </a>
                     </li>
                 ))}
             </ul>

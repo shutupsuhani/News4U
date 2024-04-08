@@ -1,183 +1,176 @@
 .topbar {
-    background: #08acbb;
-    height: 100px;
-    width:100%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: var(--z-fixed);
-  }
+  background: #08acbb;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .logo-img {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    align-items: center;
-    padding: 5px;
-}  
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  align-items: center;
+  padding: 5px;
+}
 
 .logo-title {
-    color: white;
-    font-family: monospace;
-    font-size: 25px;
-    font-weight: 600;
+  color: white;
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .weather-img {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin-top: 20px;
-    padding: 5px;
-    margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-top: 20px;
+  padding: 5px;
+  margin-left: 10px;
 }
 
 .weather-title {
-    font-size: 15px;
-    color: bisque;
-    margin-bottom: 30px;
-    font-weight: 400;
+  font-size: 15px;
+  color: bisque;
+  margin-bottom: 30px;
+  font-weight: 400;
 }
 
 .elements {
-    display: flex;
-    font-size: 18px;
-    color: beige;
-    padding: 5px;
-    font-weight: 400;
-    margin-top: 10px;
-    margin-left: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}  
+  display: flex;
+  font-size: 18px;
+  color: beige;
+  padding: 5px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 
 .nav-container {
-    display: flex;
+  display: flex;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 
-    display: flex;
-    
+  display: flex;
 }
 
-li:hover{
-    color: black;
-    cursor:progress;
+li:hover {
+  color: black;
+  cursor: progress;
 }
 
 .nav-icon {
-    display: none;
-    color: black;
-  }
-  
-  .nav-icon .icon {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-  }
+  display: none;
+  color: black;
+}
 
-  .nav-item {
-    line-height: 40px;
-    margin-right: 1rem;
-  }
-  
-  .nav-item:after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    background: transparent;
-    transition: width 0.7s ease, background-color 0.5s ease;
-  }
-  
-  .nav-item:hover:after {
-    width: 100%;
-    background: #ffdd40;
-  }
+.nav-icon .icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
 
-  .user-email {
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
+}
 
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family:monospace;
-    color:rgb(69, 77, 85);
-  }
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
 
-  .logout-btn {
-    margin-left: 5px;
-    font-weight: bold;
-    height: 40px;
-    width: 80px;
-    font-size: 14px;
-  }
+.nav-item:hover:after {
+  width: 100%;
+  background: #ffdd40;
+}
 
+.user-email {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  color: rgb(69, 77, 85);
+}
+
+.logout-btn {
+  margin-left: 5px;
+  font-weight: bold;
+  height: 40px;
+  width: 80px;
+  font-size: 14px;
+}
 
 @media only screen and (max-width: 768px) {
-    
-    .elements {
-        display: inline;
-    }
-     
-    .topbar {
-        height: 75px;
-    }
+  .elements {
+    display: inline;
+  }
 
-    .logo-title {
-        font-size: 17px;
-        font-weight: 400;
-    }
+  .topbar {
+    height: 75px;
+  }
 
-    .logo-img {
-        height: 45px;
-        width: 45px;
-    }
+  .logo-title {
+    font-size: 17px;
+    font-weight: 400;
+  }
 
-    .weather-img {
-        height: 30px;
-        width: 30px;
-    }
+  .logo-img {
+    height: 45px;
+    width: 45px;
+  }
 
-    .nav-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        border-top: 1pxsolid #fff;
-        position: absolute;
-        top: 80px;
-        left: -110%;
-        opacity: 1;
-        transition: all 0.5s ease;
-      }
-    
-      .nav-menu.active {
-        background: #08acbb;
-        left: 0px;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-      }
+  .weather-img {
+    height: 30px;
+    width: 30px;
+  }
 
-    .nav-icon {
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(-100%, -50%);
-        width: 2rem;
-        height: 2rem;
-        cursor: pointer;
-        color: white;
-      }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #08acbb;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-100%, -50%);
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    color: white;
+  }
 }

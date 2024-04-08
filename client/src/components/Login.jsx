@@ -1,11 +1,11 @@
 // Login.js
-import  { useState } from "react";
+import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase.js";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from './AuthContext'; // Import the useAuth hook
+import { useAuth } from "./AuthContext"; // Import the useAuth hook
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -15,7 +15,11 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       const user = userCredential.user;
       login(user); // Set user information in the context
       setEmail("");
@@ -29,19 +33,37 @@ const Login = () => {
   };
 
   return (
-    <div className='register-div'>
+    <div className="register-div">
       <h2>Login</h2>
-      <div className='register-form'>
-        <label className='inputlabel'>Email:</label>
-        <input className='inputarea' type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <label className='inputlabel'>Password:</label>
-        <input className='inputarea' type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button onClick={handleLogin} className='reg-btn'>Login</button>
+      <div className="register-form">
+        <label className="inputlabel">Email:</label>
+        <input
+          className="inputarea"
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <label className="inputlabel">Password:</label>
+        <input
+          className="inputarea"
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button onClick={handleLogin} className="reg-btn">
+          Login
+        </button>
       </div>
-      <p>Already have an Account? <Link to="/register">Register</Link></p>
+      <p>
+        Already have an Account? <Link to="/register">Register</Link>
+      </p>
       <ToastContainer />
     </div>
   );
-}
+};
 
 export default Login;

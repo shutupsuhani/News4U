@@ -1,6 +1,6 @@
 // AuthContext.js
-import  { createContext, useState, useContext } from 'react';
-import { auth } from '../firebase';
+import { createContext, useState, useContext } from "react";
+import { auth } from "../firebase";
 
 const AuthContext = createContext();
 
@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     // Logout logic
     setUser(null);
-    auth.signOut()
+    auth.signOut();
   };
 
   return (

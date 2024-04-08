@@ -1,36 +1,36 @@
 import "./topbar.css";
 import { HamburgetMenuClose, HamburgetMenuOpen } from "./Icon";
 import { useState } from "react";
-import { useAuth } from './AuthContext';
+import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
 const Topbar = () => {
   const [click, setClick] = useState(false);
   const navigate = useNavigate();
   const handleClick = () => setClick(!click);
-  const { user,logout } = useAuth();
-  
+  const { user, logout } = useAuth();
+
   const handleBusinessClick = () => {
-    navigate('/BusinessNews'); 
+    navigate("/BusinessNews");
   };
 
   const handleEntertainmentClick = () => {
-    navigate('/EntertainmentNews'); 
+    navigate("/EntertainmentNews");
   };
 
   const handleLifestyleClick = () => {
-    navigate('/LifestyleNews'); 
+    navigate("/LifestyleNews");
   };
 
   const handleHealthClick = () => {
-    navigate('/HealthNews'); 
+    navigate("/HealthNews");
   };
-  
+
   const handleSportsClick = () => {
-    navigate('/SportsNews'); 
+    navigate("/SportsNews");
   };
 
   const handleNewsClick = () => {
-    navigate('/latestNews'); 
+    navigate("/latestNews");
   };
   return (
     <>
@@ -42,12 +42,24 @@ const Topbar = () => {
           </div>
           <div className="elements">
             <ul className={click ? "nav-menu active" : "nav-menu"}>
-              <li className="nav-item" onClick={handleNewsClick}>NEWS</li>
-              <li className="nav-item " onClick={handleSportsClick}>SPORTS</li>
-              <li className="nav-item" onClick={handleBusinessClick}>BUSINESS</li>
-              <li className="nav-item" onClick={handleEntertainmentClick}>ENTERTAINMENT</li>
-              <li className="nav-item" onClick={handleLifestyleClick}>LIFESTYLE</li>
-              <li className="nav-item" onClick={handleHealthClick}>HEALTH</li>
+              <li className="nav-item" onClick={handleNewsClick}>
+                NEWS
+              </li>
+              <li className="nav-item " onClick={handleSportsClick}>
+                SPORTS
+              </li>
+              <li className="nav-item" onClick={handleBusinessClick}>
+                BUSINESS
+              </li>
+              <li className="nav-item" onClick={handleEntertainmentClick}>
+                ENTERTAINMENT
+              </li>
+              <li className="nav-item" onClick={handleLifestyleClick}>
+                LIFESTYLE
+              </li>
+              <li className="nav-item" onClick={handleHealthClick}>
+                HEALTH
+              </li>
             </ul>
           </div>
 
@@ -66,15 +78,16 @@ const Topbar = () => {
           <div className="weather">
             <img src="./weather.png" className="weather-img" />
             <span className="weather-title">20°C</span>
-            
           </div>
 
           <div className="user-email">
-          <h2>Welcome,{user ? user.email : 'Guest'}</h2>
-          {user && <button className="logout-btn" onClick={logout}>Logout</button>}
+            <h2>Welcome,{user ? user.email : "Guest"}</h2>
+            {user && (
+              <button className="logout-btn" onClick={logout}>
+                Logout
+              </button>
+            )}
           </div>
-
-          
         </div>
       </div>
     </>

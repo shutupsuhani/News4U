@@ -11,7 +11,7 @@ It has  Authentication  Feature like Register,Login,Logout implemented using Fir
 
 Responsive Web design , Responsive to All screen Types by using Cascading Style Sheets.
 
-It has a Pop Up feature uisng Toast Library in React.
+It has a Pop Up feature using Toast Library in React.
 
 <img width="600" alt="Screenshot 2024-03-28 150852" src="https://github.com/shutupsuhani/News4U/assets/151936391/36f2123e-7ed8-46dc-99ee-10f2ba2e4bf3">
 
